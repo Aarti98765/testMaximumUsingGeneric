@@ -1,13 +1,21 @@
 package com.bridgelabz.generic;
 
 public class GetMaximum {
-    public static  Integer findMaxInteger(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-        Integer maximumValue = firstNumber;
-        if (secondNumber.compareTo(maximumValue) > 0)
-            maximumValue = secondNumber;
-        if (thirdNumber.compareTo(maximumValue) > 0)
-            maximumValue = thirdNumber;
-        return maximumValue;
+    public static  Integer findMaxIntegerValue(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
+        Integer maximumIntegerValue = firstNumber;
+        if (secondNumber.compareTo(maximumIntegerValue) > 0)
+            maximumIntegerValue = secondNumber;
+        if (thirdNumber.compareTo(maximumIntegerValue) > 0)
+            maximumIntegerValue = thirdNumber;
+        return maximumIntegerValue;
+    }
+    public static  Float findMaxFloatValue(Float firstNumber, Float secondNumber, Float thirdNumber) {
+        Float maximumFloatValue = firstNumber;
+        if (secondNumber.compareTo(maximumFloatValue) > 0)
+            maximumFloatValue = secondNumber;
+        if (thirdNumber.compareTo(maximumFloatValue) > 0)
+            maximumFloatValue = thirdNumber;
+        return maximumFloatValue;
     }
     public static void main(String[] args) {
         System.out.println("Welcome to the program of finding maximum one among all");
