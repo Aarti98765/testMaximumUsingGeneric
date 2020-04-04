@@ -1,31 +1,23 @@
 package com.bridgelabz.generic;
 
-public class GetMaximum {
-    public static  Integer findMaxIntegerValue(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-        Integer maximumIntegerValue = firstNumber;
-        if (secondNumber.compareTo(maximumIntegerValue) > 0)
-            maximumIntegerValue = secondNumber;
-        if (thirdNumber.compareTo(maximumIntegerValue) > 0)
-            maximumIntegerValue = thirdNumber;
-        return maximumIntegerValue;
+public class GetMaximum<E extends Comparable> {
+    E first;
+    E second;
+    E third;
+    public GetMaximum(E first, E second, E third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
     }
-    public static  Float findMaxFloatValue(Float firstNumber, Float secondNumber, Float thirdNumber) {
-        Float maximumFloatValue = firstNumber;
-        if (secondNumber.compareTo(maximumFloatValue) > 0)
-            maximumFloatValue = secondNumber;
-        if (thirdNumber.compareTo(maximumFloatValue) > 0)
-            maximumFloatValue = thirdNumber;
-        return maximumFloatValue;
+    public E checkMaximum() {
+        return checkMaximum(first,second, third);
     }
-    public static  String findMaxStringValue(String firstNumber, String secondNumber, String thirdNumber) {
-        String maximumStringValue = firstNumber;
-        if (secondNumber.compareTo(maximumStringValue) > 0)
-            maximumStringValue = secondNumber;
-        if (thirdNumber.compareTo(maximumStringValue) > 0)
-            maximumStringValue = thirdNumber;
-        return maximumStringValue;
-    }
-    public static void main(String[] args) {
-        System.out.println("Welcome to the program of finding maximum one among all");
+    public static <E extends Comparable> E checkMaximum(E first, E second, E third) {
+        E maximum = first;
+        if (second.compareTo(maximum) > 0)
+            maximum = second;
+        if (third.compareTo(maximum) > 0)
+            maximum = third;
+        return maximum;
     }
 }
