@@ -40,11 +40,29 @@ public class TestMaximum {
         Float maxFloatValue = getMaximum.findMaxFloatValue(3.1f,5.1f,2.1f);
         Assert.assertEquals((Float)5.1f, maxFloatValue);
     }
-
     @Test
     public void givenFloats_whenMaxIsThird_returnMaximum() {
         getMaximum = new GetMaximum();
         Float maxFloatValue = getMaximum.findMaxFloatValue(2.1f,3.1f,5.1f);
         Assert.assertEquals((Float)5.1f, maxFloatValue);
+    }
+
+    @Test
+    public void givenStrings_whenMaxIsFirst_returnMaximum() {
+        getMaximum = new GetMaximum();
+        String maxString = getMaximum.findMaxStringValue("Orange","Apple","Banana");
+        Assert.assertEquals("Orange", maxString);
+    }
+    @Test
+    public void givenStrings_whenMaxIsSecond_returnMaximum() {
+        getMaximum = new GetMaximum();
+        String maxString = getMaximum.findMaxStringValue("Apple","Orange","Banana");
+        Assert.assertEquals("Orange", maxString);
+    }
+    @Test
+    public void givenStrings_whenMaxIsThird_returnMaximum() {
+        getMaximum = new GetMaximum();
+        String maxString = getMaximum.findMaxStringValue("Apple","Banana","Orange");
+        Assert.assertEquals("Orange", maxString);
     }
 }

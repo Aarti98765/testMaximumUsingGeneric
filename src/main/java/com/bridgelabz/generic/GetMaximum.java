@@ -17,6 +17,14 @@ public class GetMaximum {
             maximumFloatValue = thirdNumber;
         return maximumFloatValue;
     }
+    public static  String findMaxStringValue(String firstNumber, String secondNumber, String thirdNumber) {
+        String maximumStringValue = firstNumber;
+        if (secondNumber.compareTo(maximumStringValue) > 0)
+            maximumStringValue = secondNumber;
+        if (thirdNumber.compareTo(maximumStringValue) > 0)
+            maximumStringValue = thirdNumber;
+        return maximumStringValue;
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to the program of finding maximum one among all");
     }
